@@ -7,8 +7,9 @@ const routes: Routes = [{ path: '', component: SampleComponent }];
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      initialNavigation: 'enabled',
-    }),
+    initialNavigation: 'enabled',
+    relativeLinkResolution: 'legacy'
+}),
   ],
   exports: [RouterModule],
 })
