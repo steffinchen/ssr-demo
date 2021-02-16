@@ -8,7 +8,13 @@ export class DummyService {
 
   async someAsyncFunction() {}
 
-  somePromiseFunction() {}
+  somePromiseFunction(timeout = 2000): Promise<string> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('promise resolved');
+      }, timeout);
+    });
+  }
 
   someObservableFunction() {}
 }
