@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,7 @@ import { NgWelcomeComponent } from './ng-welcome/ng-welcome.component';
 
 @NgModule({
   declarations: [AppComponent, SampleComponent, ShellRenderDirective, ShellNoRenderDirective, NgWelcomeComponent],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, BrowserTransferStateModule],
   providers: [],
   bootstrap: [AppComponent],
 })
