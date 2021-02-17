@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'r', component: SampleComponent, resolve: { message: SampleResolver } },
   { path: 'g', component: SampleComponent, canActivate: [SampleGuard] },
   { path: 'gr', component: SampleComponent, canActivate: [SampleGuard], resolve: { message: SampleResolver } },
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
 ];
 
 @NgModule({
